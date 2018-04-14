@@ -3,6 +3,7 @@ package net.cafesilencio.demo.view.activity
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import android.support.v7.widget.LinearLayoutManager
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
 import net.cafesilencio.demo.R
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         viewModel = ViewModelProviders.of(this, viewModelFactory).get(MainActivityViewModel::class.java)
 
         val gitRepoAdapter = GitRepoAdapter({ a, b -> a.id == b.id })
+        gitRepoList.layoutManager = LinearLayoutManager(this)
         gitRepoList.adapter = gitRepoAdapter
     }
 }
