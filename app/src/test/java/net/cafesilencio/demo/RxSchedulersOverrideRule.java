@@ -27,6 +27,20 @@ public class RxSchedulersOverrideRule implements TestRule {
             public void evaluate() throws Throwable {
                 RxAndroidPlugins.reset();
 
+                RxJavaPlugins.setIoSchedulerHandler(new Function<Scheduler, Scheduler>() {
+                    @Override
+                    public Scheduler apply(Scheduler scheduler) throws Exception {
+                        return Schedulers.trampoline();
+                    }
+                });
+
+                RxJavaPlugins.setComputationSchedulerHandler(new Function<Scheduler, Scheduler>() {
+                    @Override
+                    public Scheduler apply(Scheduler scheduler) throws Exception {
+                        return Schedulers.trampoline();
+                    }
+                });
+
                 RxJavaPlugins.setInitNewThreadSchedulerHandler(new Function<Callable<Scheduler>, Scheduler>() {
                     @Override
                     public Scheduler apply(@NonNull Callable<Scheduler> schedulerCallable) throws Exception {

@@ -31,7 +31,7 @@ class MainActivityViewModel
 //                .subscribeOn(Schedulers.io())
 //                .observeOn(AndroidSchedulers.mainThread())
 //                .doOnError {
-//                    gitReposeLiveData.value = Response(Status.SUCCESS, null, it)
+//                    gitReposeLiveData.value = Response(Status.ERROR, null, it)
 //                }
 //                .doOnSuccess {
 //                    gitReposeLiveData.value = Response(Status.SUCCESS, it, null)
