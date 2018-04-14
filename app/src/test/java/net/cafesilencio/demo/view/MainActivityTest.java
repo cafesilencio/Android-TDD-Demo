@@ -44,6 +44,6 @@ public class MainActivityTest {
         assertThat(repoList.get(1).getHtmlUrl(), is("repo LMNOP url"));
 
         assertThat(repoList.get(2).getName(), is("repo XYZ"));
-        assertThat(repoList.get(2).getName(), is("repo XYZ url"));
+        assertThat(repoList.get(2).getHtmlUrl(), is("repo XYZ url"));
     }
 }
