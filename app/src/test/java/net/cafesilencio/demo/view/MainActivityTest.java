@@ -4,11 +4,13 @@ import android.support.v7.widget.RecyclerView;
 
 import net.cafesilencio.demo.BuildConfig;
 import net.cafesilencio.demo.R;
+import net.cafesilencio.demo.RxSchedulersOverrideRule;
 import net.cafesilencio.demo.TestDemoApp;
 import net.cafesilencio.demo.model.GitRepoRecord;
 import net.cafesilencio.demo.view.activity.MainActivity;
 import net.cafesilencio.demo.view.adapter.GitRepoAdapter;
 
+import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
@@ -27,6 +29,9 @@ import static org.junit.Assert.assertTrue;
 @RunWith(RobolectricTestRunner.class)
 @Config(constants = BuildConfig.class, application = TestDemoApp.class)
 public class MainActivityTest {
+
+    @Rule
+    public RxSchedulersOverrideRule rxSchedRule = new RxSchedulersOverrideRule();
 
     @Test
     public void onResume_loadsDataIntoRecycleView() {

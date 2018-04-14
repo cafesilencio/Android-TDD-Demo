@@ -1,6 +1,7 @@
 package net.cafesilencio.demo;
 
 import net.cafesilencio.demo.di.DaggerApplicationComponent;
+import net.cafesilencio.demo.di.DaggerTestApplicationComponent;
 import net.cafesilencio.demo.di.TestApplicationModule;
 
 /**
@@ -10,9 +11,10 @@ public class TestDemoApp extends DemoApp {
 
     @Override
     protected void initializeInjector() {
-        DaggerApplicationComponent.builder()
-                .applicationModule(new TestApplicationModule(this))
-                .build().inject(this);
+        DaggerTestApplicationComponent.builder()
+                .testApplicationModule(new TestApplicationModule(this))
+                .build()
+                .inject(this);
     }
 
 

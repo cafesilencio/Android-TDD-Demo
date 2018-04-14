@@ -2,6 +2,7 @@ package net.cafesilencio.demo.view.activity.viewmodel
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
+import net.cafesilencio.demo.domain.GetGitRepos
 import javax.inject.Inject
 
 /**
@@ -10,11 +11,11 @@ import javax.inject.Inject
 class MainActivityViewModelFactory
 
     @Inject
-    constructor(): ViewModelProvider.Factory {
+    constructor(private val getGitRepos: GetGitRepos): ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(MainActivityViewModel::class.java)) {
-            return MainActivityViewModel() as T
+            return MainActivityViewModel(getGitRepos) as T
         }
         throw IllegalArgumentException("Unknown ViewModel class")
     }

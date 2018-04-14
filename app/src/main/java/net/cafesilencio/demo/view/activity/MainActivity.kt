@@ -36,28 +36,28 @@ class MainActivity : AppCompatActivity() {
         gitRepoList.layoutManager = LinearLayoutManager(this)
         gitRepoList.adapter = gitRepoAdapter
 
-        //observeReposLoaded()
+        observeReposLoaded()
     }
 
-//    override fun onResume() {
-//        super.onResume()
-//        viewModel.loadRepos()
-//    }
+    override fun onResume() {
+        super.onResume()
+        viewModel.loadRepos()
+    }
 
-//    fun observeReposLoaded() {
-//        viewModel.gitReposeLiveData.observe(this, Observer<Response<List<GitRepoRecord>>> { resp -> updateViewWithGitRecords(resp!!) })
-//    }
+    fun observeReposLoaded() {
+        viewModel.gitReposeLiveData.observe(this, Observer<Response<List<GitRepoRecord>>> { resp -> updateViewWithGitRecords(resp!!) })
+    }
 
-//    fun updateViewWithGitRecords(resp: Response<List<GitRepoRecord>>) {
-//        val adapter = gitRepoList.adapter as GitRepoAdapter
-//        when(resp.status) {
-//            Status.SUCCESS -> {
-//                adapter.swap(resp.data ?: listOf())
-//            }
-//            Status.ERROR -> {
-//                //todo notify user
-//                adapter.swap(listOf())
-//            }
-//        }
-//    }
+    fun updateViewWithGitRecords(resp: Response<List<GitRepoRecord>>) {
+        val adapter = gitRepoList.adapter as GitRepoAdapter
+        when(resp.status) {
+            Status.SUCCESS -> {
+                adapter.swap(resp.data ?: listOf())
+            }
+            Status.ERROR -> {
+                //todo notify user
+                adapter.swap(listOf())
+            }
+        }
+    }
 }
