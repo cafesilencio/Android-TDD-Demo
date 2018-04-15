@@ -60,11 +60,13 @@ dependencies {
     implementation group: 'com.jakewharton.rxrelay2', name: 'rxrelay', version: '2.0.0'
     implementation 'com.android.support:design:27.1.1'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.9.5'
-
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+    implementation "com.fasterxml.jackson.module:jackson-module-kotlin:2.9.+"
 
     testAnnotationProcessor "com.google.dagger:dagger-compiler:$project.daggerVersion"
     testImplementation 'org.mockito:mockito-core:2.16.0'
     testImplementation 'org.robolectric:robolectric:3.5.1'
+    testImplementation group: 'com.squareup.okhttp3', name: 'mockwebserver', version: '3.10.0'
     testImplementation("android.arch.core:core-testing:1.1.1", {
         exclude group: 'com.android.support', module: 'support-compat'
         exclude group: 'com.android.support', module: 'support-annotations'
