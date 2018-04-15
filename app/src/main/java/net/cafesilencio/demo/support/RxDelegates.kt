@@ -10,10 +10,10 @@ import io.reactivex.schedulers.Schedulers
 /**
  * Created by Seth Bourget on 4/14/18.
  */
-inline fun <T> rxSingleDelegate(single: Single<T>,
-                                successFunc: Consumer<T>,
-                                errorFunc: Consumer<Throwable>,
-                                resumeFunc: Function<Throwable, Single<T>>): Disposable = single
+fun <T> rxSingleDelegate(single: Single<T>,
+                         successFunc: Consumer<T>,
+                         errorFunc: Consumer<Throwable>,
+                         resumeFunc: Function<Throwable, Single<T>>): Disposable = single
         .subscribeOn(Schedulers.io())
         .observeOn(AndroidSchedulers.mainThread())
         .doOnError(errorFunc)
