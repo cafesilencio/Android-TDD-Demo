@@ -28,9 +28,9 @@ class MainActivityViewModel
 
     fun loadRepos() {
         disposables.add(rxSingleDelegate(getGitRepos.call(),
-                        getGitReposSuccess,
-                        getGitReposeError,
-                        getGitReposeResume))
+                                            getGitReposSuccess,
+                                            getGitReposeError,
+                                            getGitReposeResume))
     }
 
     val getGitReposSuccess = Consumer<List<GitRepoRecord>> { gitReposeLiveData.value = Response(Status.SUCCESS, it, null) }
