@@ -8,7 +8,7 @@ import android.support.v7.widget.LinearLayoutManager
 import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
 import net.cafesilencio.demo.R
-import net.cafesilencio.demo.model.GitRepoRecord
+import net.cafesilencio.demo.domain.model.GitRepoRecord
 import net.cafesilencio.demo.view.Response
 import net.cafesilencio.demo.view.Status
 import net.cafesilencio.demo.view.activity.viewmodel.MainActivityViewModel

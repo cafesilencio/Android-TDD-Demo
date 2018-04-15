@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import net.cafesilencio.demo.view.adapter.viewholder.GitRepoViewHolder
 import net.cafesilencio.demo.R
-import net.cafesilencio.demo.model.GitRepoRecord
+import net.cafesilencio.demo.domain.model.GitRepoRecord
 
 
 /**

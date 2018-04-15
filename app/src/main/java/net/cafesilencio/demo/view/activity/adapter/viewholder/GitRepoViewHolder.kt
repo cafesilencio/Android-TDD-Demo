@@ -3,7 +3,7 @@ package net.cafesilencio.demo.view.adapter.viewholder
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import kotlinx.android.synthetic.main.git_repo_layout.view.*
-import net.cafesilencio.demo.model.GitRepoRecord
+import net.cafesilencio.demo.domain.model.GitRepoRecord
 
 /**
  * Created by Seth Bourget on 4/7/18.

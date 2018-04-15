@@ -1,9 +1,8 @@
 package net.cafesilencio.demo.di;
 
 import net.cafesilencio.demo.TestDemoApp;
-import net.cafesilencio.demo.di.ApplicationModule;
 import net.cafesilencio.demo.domain.GetGitRepos;
-import net.cafesilencio.demo.model.GitRepoRecord;
+import net.cafesilencio.demo.domain.model.GitRepoRecord;
 
 import java.util.Arrays;
 import java.util.List;

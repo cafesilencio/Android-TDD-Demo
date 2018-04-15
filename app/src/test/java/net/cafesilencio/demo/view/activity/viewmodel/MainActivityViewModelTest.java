@@ -1,13 +1,12 @@
 package net.cafesilencio.demo.view.activity.viewmodel;
 
-import android.arch.core.executor.testing.InstantTaskExecutorRule;
 import android.arch.lifecycle.Observer;
 
 import net.cafesilencio.demo.BuildConfig;
 import net.cafesilencio.demo.RxSchedulersOverrideRule;
 import net.cafesilencio.demo.TestDemoApp;
 import net.cafesilencio.demo.domain.GetGitRepos;
-import net.cafesilencio.demo.model.GitRepoRecord;
+import net.cafesilencio.demo.domain.model.GitRepoRecord;
 import net.cafesilencio.demo.view.Response;
 import net.cafesilencio.demo.view.Status;
 
@@ -19,7 +18,6 @@ import org.mockito.ArgumentCaptor;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -30,7 +28,6 @@ import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
-import static org.mockito.Mockito.withSettings;
 
 /**
  * Created by Seth Bourget on 4/14/18.
