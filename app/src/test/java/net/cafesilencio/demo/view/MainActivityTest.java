@@ -6,7 +6,7 @@ import net.cafesilencio.demo.BuildConfig;
 import net.cafesilencio.demo.R;
 import net.cafesilencio.demo.RxSchedulersOverrideRule;
 import net.cafesilencio.demo.TestDemoApp;
-import net.cafesilencio.demo.model.GitRepoRecord;
+import net.cafesilencio.demo.domain.model.GitRepoRecord;
 import net.cafesilencio.demo.view.activity.MainActivity;
 import net.cafesilencio.demo.view.adapter.GitRepoAdapter;
 

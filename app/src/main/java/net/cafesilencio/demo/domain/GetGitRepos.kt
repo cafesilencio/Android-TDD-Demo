@@ -1,7 +1,7 @@
 package net.cafesilencio.demo.domain
 
 import io.reactivex.Single
-import net.cafesilencio.demo.model.GitRepoRecord
+import net.cafesilencio.demo.domain.model.GitRepoRecord
 import javax.inject.Inject
 
 /**
