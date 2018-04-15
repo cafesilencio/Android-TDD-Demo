@@ -10,7 +10,7 @@ import io.reactivex.schedulers.Schedulers
 /**
  * Created by Seth Bourget on 4/14/18.
  */
-inline fun <T> rxSingleDelegate(single: Single<T>,
+fun <T> rxSingleDelegate(single: Single<T>,
                                 successFunc: Consumer<T>,
                                 errorFunc: Consumer<Throwable>,
                                 resumeFunc: Function<Throwable, Single<T>>): Disposable = single
